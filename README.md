@@ -71,8 +71,8 @@ github_release_geofar_sh/
 |-- requirements.txt
 |-- environment.yml
 |-- .gitignore
-|-- MISSING_FILES.md
 |-- SECURITY_CHECK_REPORT.md
+|-- REPRODUCIBILITY_NOTES.md
 |-- reproduce_commands.md
 |-- configs/
 |-- scripts/
@@ -109,7 +109,7 @@ Large public datasets, trained checkpoints, point clouds, full render outputs, T
 
 - This is a cleaned release package copied from a local research workspace.
 - Local absolute paths were replaced with placeholders such as `<PROJECT_ROOT>`, `<DATA_ROOT>`, and `<OUTPUT_ROOT>`.
-- See `MISSING_FILES.md` for items that require manual confirmation before a public GitHub release.
+- See `REPRODUCIBILITY_NOTES.md` for details on included materials, excluded large assets, and reproduction instructions.
 - See `SECURITY_CHECK_REPORT.md` for the automated release safety check.
 
 
