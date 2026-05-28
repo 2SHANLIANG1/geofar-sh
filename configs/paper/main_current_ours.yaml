@@ -1,0 +1,29 @@
+﻿variant: current_ours
+role: paper_main_method
+method: Base 3D Gaussian Splatting + per-Gaussian appearance latent + DDSR decoupled residual + gate/spec mask + Stage2 appearance-only refinement
+train:
+  eval: true
+  iterations: 35000
+  appearance_stage2_start: 30001
+  appearance_stage2_iters: 5000
+  appearance_residual_enable_step: 30001
+  appearance_residual_warmup_steps: 1500
+  appearance_lambda_warmup_iters: 1500
+  use_appearance_residual: true
+  appearance_latent_dim: 8
+  appearance_gate_floor: 0.02
+  feature_lr: 5.0e-5
+  lr_appearance_latent: 2.0e-4
+  lr_fastkan: 5.0e-5
+  lr_fastkan_gate: 2.0e-5
+  lambda_residual_reg: 1.0e-4
+  lambda_gate_reg: 1.0e-5
+excluded_from_mainline:
+  full_joint_refinement: true
+  plus_heavy_head: true
+  image_exposure_embedding: true
+  residual_guided_densify: true
+  hard_region_three_weight: true
+
+
+

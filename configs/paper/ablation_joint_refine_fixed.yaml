@@ -1,0 +1,16 @@
+﻿variant: ours_joint_refine_fixed
+role: exploratory_ablation_negative_result
+status: not_main_method
+summary: Positive on garden but unstable over garden/bonsai/room average.
+known_result:
+  table: output/paper_tables/m360_3scene_fixed_compare.md
+  garden_delta_psnr: 0.0961
+  bonsai_delta_psnr: -0.0656
+  room_delta_psnr: -0.1426
+  average_delta_psnr: -0.0373
+policy:
+  do_not_expand_as_mainline: true
+  keep_for_negative_result_analysis: true
+
+
+

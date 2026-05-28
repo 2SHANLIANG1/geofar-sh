@@ -1,0 +1,22 @@
+﻿# Core Python dependencies for GeoFAR-SH.
+# Exact CUDA/PyTorch versions should be matched to the user's driver/toolkit.
+torch>=2.0
+torchvision>=0.15
+torchaudio>=2.0
+numpy>=1.23
+pandas>=1.5
+tqdm>=4.64
+matplotlib>=3.6
+opencv-python>=4.7
+pillow>=9.0
+scipy>=1.9
+scikit-image>=0.19
+lpips>=0.1
+torchmetrics>=0.11
+PyYAML>=6.0
+plyfile>=0.8
+open3d>=0.17
+imageio>=2.25
+
+
+

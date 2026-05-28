@@ -1,0 +1,84 @@
+﻿scene: garden
+dataset: mipnerf360
+baseline_checkpoint: <PROJECT_ROOT>\output\baseline_ckpts_from_gas\garden_iter30000.pth
+baseline_results: <OUTPUT_ROOT>\output\garden\results.json
+
+variants:
+  strict_appearance_only_baseline:
+    iterations: 35000
+    train:
+      use_appearance_residual: true
+      appearance_stage2_start: 30001
+      appearance_stage2_iters: 5000
+      appearance_residual_enable_step: 30001
+      appearance_residual_warmup_steps: 1500
+      appearance_lambda_warmup_iters: 1500
+      appearance_latent_dim: 8
+      appearance_gate_floor: 0.02
+      residual_scale: 0.05
+      feature_lr: 5.0e-5
+      lr_appearance_latent: 2.0e-4
+      lr_fastkan: 5.0e-5
+      lr_fastkan_gate: 2.0e-5
+      lambda_residual_reg: 1.0e-4
+      lambda_gate_reg: 1.0e-5
+      lambda_diff_consistency: 1.0e-4
+      lambda_branch_diversity: 5.0e-6
+      spec_mask_temperature: 2.0
+      freeze:
+        xyz: true
+        scaling: true
+        rotation: true
+        opacity: true
+        features_dc: true
+        features_rest: true
+
+  appearance_plus_sh_10k:
+    iterations: 40000
+    train:
+      use_appearance_residual: true
+      appearance_stage2_start: 30001
+      appearance_stage2_iters: 10000
+      appearance_residual_enable_step: 30001
+      appearance_residual_warmup_steps: 1500
+      appearance_lambda_warmup_iters: 1500
+      appearance_latent_dim: 8
+      appearance_gate_floor: 0.02
+      residual_scale: 0.10
+      stage2_refine_sh: true
+      stage2_geom_unfreeze_iter: 0
+      stage2_lr_f_dc: 1.0e-4
+      stage2_lr_f_rest: 1.0e-4
+      feature_lr: 5.0e-5
+      lr_appearance_latent: 5.0e-4
+      lr_fastkan: 1.0e-4
+      lr_fastkan_gate: 5.0e-5
+      lambda_residual_reg: 1.0e-5
+      lambda_gate_reg: 1.0e-6
+      lambda_diff_consistency: 5.0e-5
+      lambda_branch_diversity: 1.0e-6
+      spec_mask_temperature: 2.0
+      freeze:
+        xyz: true
+        scaling: true
+        rotation: true
+        opacity: true
+        features_dc: false
+        features_rest: false
+
+  appearance_plus_sh_stronger_head:
+    base: appearance_plus_sh_10k
+    train:
+      appearance_latent_dim: 16
+      use_two_layer_ddsr_heads: true
+      ddsr_head_hidden_dim: 16
+      appearance_head_hidden_dim: 16
+      appearance_head_num_layers: 2
+
+  appearance_plus_sh_residual015:
+    base: appearance_plus_sh_10k
+    train:
+      residual_scale: 0.15
+
+
+

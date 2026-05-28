@@ -1,0 +1,16 @@
+﻿variant: baseline
+role: baseline_3dgs
+method: original 3D Gaussian Splatting
+code_root: <OUTPUT_ROOT>
+train:
+  eval: true
+  iterations: 35000
+  disable_appearance_residual: true
+  disable_ddsr: true
+  disable_gate: true
+notes:
+  - Use --baseline-code-root <OUTPUT_ROOT> when running original baseline code.
+  - Do not copy old code into the current repository.
+
+
+

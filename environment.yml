@@ -1,0 +1,34 @@
+﻿name: geofar_sh
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.8
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - numpy
+  - pandas
+  - tqdm
+  - matplotlib
+  - scipy
+  - scikit-image
+  - pillow
+  - pyyaml
+  - pip:
+      - opencv-python>=4.7
+      - lpips>=0.1
+      - torchmetrics>=0.11
+      - plyfile>=0.8
+      - open3d>=0.17
+      - imageio>=2.25
+
+# CUDA note:
+# Install the PyTorch/CUDA build compatible with your local GPU driver.
+# The original local setup used CUDA-enabled PyTorch and custom CUDA extensions.
+
+
+

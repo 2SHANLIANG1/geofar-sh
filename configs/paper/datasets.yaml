@@ -1,0 +1,45 @@
+﻿datasets:
+  mipnerf360:
+    display_name: MipNeRF360
+    root_candidates:
+      - <DATA_ROOT>/mipnerf360
+      - <DATA_ROOT>/mipnerf360
+      - <DATA_ROOT>/mipnerf360
+      - <DATA_ROOT>/mipnerf360
+      - <PROJECT_ROOT>/data/mipnerf360
+    outdoor_image_dir: images_4
+    indoor_image_dir: images_2
+    scenes:
+      - name: bicycle
+        split: outdoor
+      - name: flowers
+        split: outdoor
+      - name: garden
+        split: outdoor
+      - name: stump
+        split: outdoor
+      - name: treehill
+        split: outdoor
+      - name: room
+        split: indoor
+      - name: counter
+        split: indoor
+      - name: kitchen
+        split: indoor
+      - name: bonsai
+        split: indoor
+  tanks_temples:
+    display_name: Tanks&Temples
+    root: <DATA_ROOT>/tandt
+    scenes:
+      - name: truck
+      - name: train
+  deep_blending:
+    display_name: Deep Blending
+    root: <DATA_ROOT>/db
+    scenes:
+      - name: drjohnson
+      - name: playroom
+
+
+

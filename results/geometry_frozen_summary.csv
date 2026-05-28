@@ -1,0 +1,12 @@
+﻿parameter_group,scene_count,fail_count,mean_of_mean_abs_delta,max_of_max_abs_delta,mean_final_abs,expected_status
+Number of Gaussians,13,0,0,0,2456434.61538,frozen_no_change
+Position,13,0,0,0,5.47931438444,frozen_no_change
+Scale,13,0,0,0,5.39097675086,frozen_no_change
+Rotation,13,0,0,0,0.368498729485,frozen_no_change
+Opacity,13,0,0,0,2.24849875455,frozen_no_change
+SH coefficients,13,0,0.0123086165929,0.318549990654,0.583578809979,trainable_should_change
+Appearance latent,13,0,,,0.164135204803,introduced_or_trainable
+Residual heads,13,0,,,0.0223394114996,introduced_or_trainable
+
+
+

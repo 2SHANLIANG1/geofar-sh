@@ -1,0 +1,14 @@
+﻿variant: baseline
+description: Current repository with all appearance residual / DDSR / gate / spec-mask / Stage2 branches disabled.
+train_args:
+  use_appearance_residual: false
+  disable_decoupled_residual: true
+  disable_global_gate: true
+  disable_stage2_refine_opacity: true
+  disable_stage2_refine_scale: true
+  disable_stage2_refine_rotation: true
+  appearance_stage2_iters: 0
+  stage2_iters: 0
+
+
+

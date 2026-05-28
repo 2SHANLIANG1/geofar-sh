@@ -1,0 +1,48 @@
+﻿variant: main_b_geometry_frozen_appearance_sh
+description: Geometry-frozen appearance + SH refinement
+
+iterations: 40000
+appearance_stage2_start: 30001
+appearance_stage2_iters: 10000
+appearance_residual_enable_step: 30001
+appearance_residual_warmup_steps: 1500
+appearance_lambda_warmup_iters: 1500
+
+use_appearance_residual: true
+use_decoupled_residual: true
+appearance_latent_dim: 8
+appearance_gate_floor: 0.02
+
+stage2_refine_sh: true
+stage2_lr_f_dc: 1e-4
+stage2_lr_f_rest: 1e-4
+
+lr_appearance_latent: 5e-4
+lr_fastkan: 1e-4
+lr_fastkan_gate: 5e-5
+
+residual_scale: 0.10
+lambda_residual_reg: 1e-5
+lambda_gate_reg: 1e-6
+lambda_diff_consistency: 5e-5
+lambda_branch_diversity: 1e-6
+spec_mask_temperature: 2.0
+
+appearance_freeze_geometry_in_stage2: true
+appearance_disable_densify_in_stage2: true
+appearance_detach_xyz_grad: true
+appearance_detach_shape_grad: true
+
+disable_stage2_refine_opacity: true
+disable_stage2_refine_scale: true
+disable_stage2_refine_rotation: true
+
+stage2_joint_refine: false
+use_two_layer_ddsr_heads: false
+ddsr_head_hidden_dim: 8
+appearance_head_hidden_dim: 8
+appearance_head_num_layers: 1
+appearance_head_activation: silu
+
+
+

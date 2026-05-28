@@ -1,0 +1,9 @@
+﻿method,stage2_time_h,render_fps,gpu_memory_mb,model_size_mb,source_file
+3DGS-30k,NA,75.4511,7125.0769,580.0659,<PROJECT_ROOT>\output\paper_efficiency_evidence\efficiency_summary.csv
+3DGS-40k-cont,0.2096,77.2623,7132.0000,580.9784,<PROJECT_ROOT>\output\paper_efficiency_evidence\efficiency_summary.csv
+SH-only-10k,0.2152,76.0228,7127.8462,580.9784,<PROJECT_ROOT>\output\paper_efficiency_evidence\efficiency_summary.csv
+App-only-10k,0.4258,75.4861,7174.4615,655.9472,<PROJECT_ROOT>\output\paper_efficiency_evidence\efficiency_summary.csv
+GeoFAR-SH,0.5055,74.4519,7174.4615,655.9472,<PROJECT_ROOT>\output\paper_efficiency_evidence\efficiency_summary.csv
+
+
+
