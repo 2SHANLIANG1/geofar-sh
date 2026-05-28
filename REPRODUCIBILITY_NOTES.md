@@ -6,35 +6,35 @@ This repository is organized to support reproducible research for:
 
 The release package provides the source code, protocols, summaries, and generation utilities needed to inspect and reproduce the reported GeoFAR-SH workflow.
 
-## Included Materials
+## Repository Contents
 
 The repository contains:
 
 - **core implementation** for the GeoFAR-SH appearance refinement method;
-- **environment files** including `environment.yml` and `requirements.txt`;
+- **environment configuration files** including `environment.yml` and `requirements.txt`;
 - **training and evaluation scripts** for Stage 2 refinement, rendering, metrics, aggregation, and analysis;
 - **fairness-control protocol** documentation and scripts for the main variants;
 - **CUDA-fused rasterisation documentation** and modified rasterizer files under `cuda_changes/`;
-- **aggregated results** for scene-level, dataset-level, overall, ablation, efficiency, and geometry-freezing analyses;
+- **aggregated experimental results** for scene-level, dataset-level, overall, ablation, efficiency, and geometry-freezing analyses;
 - **table and figure generation utilities** for paper-facing quantitative tables and qualitative figures.
 
-## Materials Not Included
+## Excluded Large Assets
 
-For storage constraints and third-party dataset licensing considerations, this repository does not include:
+This repository does not include:
 
 - public datasets;
 - full trained checkpoints;
 - complete per-view render folders;
 - large TensorBoard logs.
 
-These materials can be regenerated or obtained through the standard public data and training workflow described in the repository.
+These assets are excluded due to storage constraints and third-party dataset licensing considerations.
 
 ## Dataset Preparation
 
 Users should download the public datasets from their official sources and place them according to the path layout described in `README.md`, for example:
 
 ```text
-<DATA_ROOT>/
+DATA_ROOT/
 |-- mipnerf360/
 |-- tandt/
 `-- db/
@@ -48,7 +48,7 @@ The experiments use:
 
 ## Checkpoint Reproduction
 
-Checkpoints can be reproduced by following the command templates in `reproduce_commands.md`.
+The 30k checkpoints and Stage-2 checkpoints can be reproduced by following the command templates in `reproduce_commands.md`.
 
 The intended workflow is:
 
@@ -76,7 +76,7 @@ Use `reproduce_commands.md` for Windows PowerShell and Linux bash templates cove
 - geometry-freezing verification;
 - efficiency measurement.
 
-All command templates use placeholders such as `<PROJECT_ROOT>`, `<DATA_ROOT>`, `<OUTPUT_ROOT>`, `<SCENE>`, and `<CHECKPOINT_30K>` so they can be adapted to different local systems.
+All command templates use placeholders such as `PROJECT_ROOT`, `DATA_ROOT`, `OUTPUT_ROOT`, `SCENE`, and `CHECKPOINT_30K` so they can be adapted to different local systems.
 
 ## CUDA Rasterisation Notes
 
@@ -86,4 +86,4 @@ The documentation explains how GeoFAR-SH replaces the per-Gaussian RGB before al
 
 ## Result Summaries
 
-The `results/` directory contains compact aggregated summaries and LaTeX table artifacts. These files are intended for inspection, manuscript table generation, and consistency checks without requiring the large intermediate training artifacts.
+The `results/` directory contains compact aggregated summaries and LaTeX table artifacts. Reported tables and figures can be reproduced from these aggregated summaries together with the table and figure generation utilities in `scripts/`.

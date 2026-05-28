@@ -16,7 +16,7 @@ The pipeline follows a two-stage protocol:
 4. Disable densification and pruning during Stage 2.
 5. Optimize only SH colour coefficients and a lightweight per-Gaussian appearance residual branch.
 6. Replace only the per-Gaussian RGB before alpha compositing with the enhanced colour.
-7. Keep projection, visibility, depth ordering, opacity accumulation, and alpha compositing unchanged.
+7. Keep projection, visibility determination, depth ordering, opacity accumulation, and alpha compositing unchanged.
 
 This makes the method a geometry-preserving colour-space refinement strategy rather than a geometry correction method.
 
@@ -41,7 +41,7 @@ The experiments use public datasets:
 Datasets are **not** included in this repository. Place them in a local data root such as:
 
 ```text
-<DATA_ROOT>/
+DATA_ROOT/
 |-- mipnerf360/
 |-- tandt/
 `-- db/
@@ -101,16 +101,15 @@ The intended workflow is:
 
 ## Code Availability Note
 
-This release includes the core method code, configuration files, reproduction scripts, result summaries, and figure/table generation tools needed to understand and reproduce the reported protocol.
+This release includes the core implementation, environment files, training and evaluation scripts, fairness-control protocol, CUDA-fused rasterisation documentation, aggregated results, and table and figure generation utilities needed to understand and reproduce the reported protocol.
 
-Large public datasets, trained checkpoints, point clouds, full render outputs, TensorBoard logs, and temporary training directories are not included because of size and licensing constraints.
+Complete public datasets, full trained checkpoints, complete per-view render folders, and large TensorBoard logs are not included because of storage constraints and third-party dataset licensing considerations.
 
 ## Important Caveats
 
 - This is a cleaned release package copied from a local research workspace.
-- Local absolute paths were replaced with placeholders such as `<PROJECT_ROOT>`, `<DATA_ROOT>`, and `<OUTPUT_ROOT>`.
-- See `REPRODUCIBILITY_NOTES.md` for details on included materials, excluded large assets, and reproduction instructions.
-- See `SECURITY_CHECK_REPORT.md` for the automated release safety check.
+- Local absolute paths were replaced with portable placeholders such as `PROJECT_ROOT`, `DATA_ROOT`, and `OUTPUT_ROOT`.
+- See `REPRODUCIBILITY_NOTES.md` for details on included materials, excluded large assets, and reproduction instructions. See `SECURITY_CHECK_REPORT.md` for the release security scan summary.
 
 
 
