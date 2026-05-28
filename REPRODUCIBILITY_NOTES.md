@@ -10,13 +10,13 @@ The release package provides the source code, protocols, summaries, and generati
 
 The repository contains:
 
-- **core implementation** for the GeoFAR-SH appearance refinement method;
-- **environment configuration files** including `environment.yml` and `requirements.txt`;
-- **training and evaluation scripts** for Stage 2 refinement, rendering, metrics, aggregation, and analysis;
-- **fairness-control protocol** documentation and scripts for the main variants;
-- **CUDA-fused rasterisation documentation** and modified rasterizer files under `cuda_changes/`;
-- **aggregated experimental results** for scene-level, dataset-level, overall, ablation, efficiency, and geometry-freezing analyses;
-- **table and figure generation utilities** for paper-facing quantitative tables and qualitative figures.
+- core implementation for the GeoFAR-SH appearance refinement method;
+- environment configuration files including `environment.yml` and `requirements.txt`;
+- training and evaluation scripts for Stage 2 refinement, rendering, metrics, aggregation, and analysis;
+- fairness-control protocol documentation and scripts for the main variants;
+- CUDA-fused rasterisation documentation and modified rasterizer files under `cuda_changes/`;
+- aggregated experimental results for scene-level, dataset-level, overall, ablation, efficiency, and geometry-freezing analyses;
+- table and figure generation utilities for paper-facing quantitative tables and qualitative figures.
 
 ## Excluded Large Assets
 
@@ -31,7 +31,7 @@ These assets are excluded due to storage constraints and third-party dataset lic
 
 ## Dataset Preparation
 
-Users should download the public datasets from their official sources and place them according to the path layout described in `README.md`, for example:
+Users should download the public datasets from their official sources and place them according to the path layout described in `README.md`.
 
 ```text
 DATA_ROOT/
@@ -54,14 +54,32 @@ The intended workflow is:
 
 1. Train or prepare the standard 3DGS 30k checkpoint for each scene.
 2. Resume from the 30k checkpoint for Stage 2 refinement.
-3. Run the fairness-control variants:
-   - `3DGS-30k`;
-   - `3DGS-40k-cont`;
-   - `SH-only-10k`;
-   - `App-only-10k`;
-   - `GeoFAR-SH / Ours`.
+3. Run the fairness-control variants.
 4. Run offline evaluation with the provided evaluation scripts.
 5. Aggregate results and regenerate tables and figures.
+
+## Fairness-Control Variants
+
+The reproducibility scripts cover the main variants:
+
+- `3DGS-30k`;
+- `3DGS-40k-cont`;
+- `SH-only-10k`;
+- `App-only-10k`;
+- `GeoFAR-SH / Ours`.
+
+## Evaluation Reproduction
+
+Reported tables and figures can be reproduced from the aggregated summaries in `results/` together with the table and figure generation utilities in `scripts/`.
+
+The included summaries support:
+
+- scene-level metric inspection;
+- dataset-level aggregation;
+- overall average comparison;
+- ablation table generation;
+- efficiency summary generation;
+- geometry-freezing verification.
 
 ## Reproduction Commands
 
@@ -76,7 +94,7 @@ Use `reproduce_commands.md` for Windows PowerShell and Linux bash templates cove
 - geometry-freezing verification;
 - efficiency measurement.
 
-All command templates use placeholders such as `PROJECT_ROOT`, `DATA_ROOT`, `OUTPUT_ROOT`, `SCENE`, and `CHECKPOINT_30K` so they can be adapted to different local systems.
+All command templates use portable placeholders such as `PROJECT_ROOT`, `DATA_ROOT`, `OUTPUT_ROOT`, `SCENE`, and `CHECKPOINT_30K` so they can be adapted to different local systems.
 
 ## CUDA Rasterisation Notes
 
@@ -86,4 +104,5 @@ The documentation explains how GeoFAR-SH replaces the per-Gaussian RGB before al
 
 ## Result Summaries
 
-The `results/` directory contains compact aggregated summaries and LaTeX table artifacts. Reported tables and figures can be reproduced from these aggregated summaries together with the table and figure generation utilities in `scripts/`.
+The `results/` directory contains compact aggregated summaries and LaTeX table artifacts.
+These files are intended for inspection, manuscript table generation, and consistency checks without requiring large intermediate training artifacts.
