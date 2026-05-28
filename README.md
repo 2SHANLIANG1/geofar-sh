@@ -42,9 +42,9 @@ Datasets are **not** included in this repository. Place them in a local data roo
 
 ```text
 <DATA_ROOT>/
-鈹溾攢鈹€ mipnerf360/
-鈹溾攢鈹€ tandt/
-鈹斺攢鈹€ db/
+|-- mipnerf360/
+|-- tandt/
+`-- db/
 ```
 
 ## Installation
@@ -65,22 +65,22 @@ The CUDA rasterizer modifications are documented in `cuda_changes/`. If you buil
 
 ```text
 github_release_geofar_sh/
-鈹溾攢鈹€ README.md
-鈹溾攢鈹€ LICENSE
-鈹溾攢鈹€ CITATION.cff
-鈹溾攢鈹€ requirements.txt
-鈹溾攢鈹€ environment.yml
-鈹溾攢鈹€ .gitignore
-鈹溾攢鈹€ MISSING_FILES.md
-鈹溾攢鈹€ SECURITY_CHECK_REPORT.md
-鈹溾攢鈹€ reproduce_commands.md
-鈹溾攢鈹€ configs/
-鈹溾攢鈹€ scripts/
-鈹溾攢鈹€ geofar_sh/
-鈹溾攢鈹€ cuda_changes/
-鈹溾攢鈹€ docs/
-鈹溾攢鈹€ results/
-鈹斺攢鈹€ figures/
+|-- README.md
+|-- LICENSE
+|-- CITATION.cff
+|-- requirements.txt
+|-- environment.yml
+|-- .gitignore
+|-- MISSING_FILES.md
+|-- SECURITY_CHECK_REPORT.md
+|-- reproduce_commands.md
+|-- configs/
+|-- scripts/
+|-- geofar_sh/
+|-- cuda_changes/
+|-- docs/
+|-- results/
+`-- figures/
 ```
 
 ## Reproduction Overview

@@ -1,20 +1,39 @@
-﻿cff-version: 1.2.0
+cff-version: 1.2.0
 title: "Geometry-Preserving Colour-Space Refinement for Appearance Enhancement in 3D Gaussian Splatting"
 message: "If you use this code or protocol, please cite the accompanying paper."
 type: software
 authors:
-  - name: "To be completed"
-repository-code: "To be completed"
-license: "To be confirmed"
+  - family-names: Zhang
+    given-names: Chenxi
+  - family-names: Meng
+    given-names: Huiming
+  - family-names: Tuo
+    given-names: Xiaohang
+  - family-names: Yao
+    given-names: Nianming
+  - family-names: Jiang
+    given-names: Shan
+  - family-names: Ma
+    given-names: Zhuo
+repository-code: "https://github.com/2SHANLIANG1/geofar-sh"
+license: "MIT"
 date-released: "2026-05-28"
 preferred-citation:
   type: article
   title: "Geometry-Preserving Colour-Space Refinement for Appearance Enhancement in 3D Gaussian Splatting"
   authors:
-    - name: "To be completed"
+    - family-names: Zhang
+      given-names: Chenxi
+    - family-names: Meng
+      given-names: Huiming
+    - family-names: Tuo
+      given-names: Xiaohang
+    - family-names: Yao
+      given-names: Nianming
+    - family-names: Jiang
+      given-names: Shan
+    - family-names: Ma
+      given-names: Zhuo
   journal: "The Visual Computer"
   year: 2026
   notes: "Manuscript under revision/resubmission."
-
-
-
